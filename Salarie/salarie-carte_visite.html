@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="./LogoDistrict.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Documentation Ajout de Salarié avec carte de visite</title>
+  </head>
+  <body>
+    <h1>Documentation Salariée avec carte de visite</h1>
+    <a class="btn" href="./sans_photo.html">Pour les sans carte de visite, merci de cliquer ici</a>
+    <p>Merci de communiquer les information liée a ce salariés :</p>
+    <div class="information">
+      <div>
+        <label for="lien-wordpress">Lien vers la carte de visite : </label>
+        <input type="text" id="lien-wordpress" />
+      </div>
+      <div>
+        <label for="nom">Nom Prénom : </label>
+        <input type="text" id="nom" />
+      </div>
+      <div>
+        <label for="nom">Mission : </label>
+        <input type="text" id="mission" />
+      </div>
+      <button class="codepen-button" onclick="traitement()"><span>Traitement</span></button>
+    </div>
+    <div id="exemple">
+      <h2>Voici un exemple :</h2>
+      <div class="carte-visite">
+        <div class="flex_center">
+          <img
+            src="https://foot16.fff.fr/wp-content/uploads/sites/27/2024/08/2.png"
+            alt="Jean-Luc Hébré"
+          />
+          <p>
+            <strong>Jean-Luc Hébré :</strong> accueil physique et téléphonique,
+            suivi des modifications des compétitions, soutien à diverses
+            commissions, soutien administratif à l'Équipe Technique
+            Départementale et au pôle arbitrage-officiels.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="resultat"></div>
+    <div id="code"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
