@@ -1,0 +1,74 @@
+/* ---------- Styles généraux ---------- */
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #0055BC;
+}
+
+/* ---------- Mise en page principale ---------- */
+.body {
+    text-align: center;
+    margin: 20px;
+}
+
+/* ---------- Titres ---------- */
+.titre-bleu {
+    color: #0055BC;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* ---------- Texte doré ---------- */
+.dore {
+    color: #D2B170;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ---------- Boutons ---------- */
+.btn-dore {
+    display: block;
+    background-color: #D2B170;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-dore:hover {
+    background-color: #c09b4f;
+}
+
+/* ---------- Images ---------- */
+.image-centree {
+    display: block;
+    margin: 10px auto;
+    max-width: 90%;
+    height: auto;
+}
+
+/* ---------- Conteneur de texte ---------- */
+.conteneur-texte {
+    width: 50%;
+    margin: 20px auto;
+    color: #0055BC;
+}
+
+/* ---------- Texte en gras ---------- */
+.gras {
+    font-weight: bold;
+}
+
+/* ---------- Vidéo ---------- */
+.video-centree {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+}
