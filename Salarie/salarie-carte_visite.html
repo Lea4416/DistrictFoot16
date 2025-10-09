@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <link rel="icon" type="image/png" sizes="32x32" href="./LogoDistrict.png">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="../Asset/images/LogoDistrict.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="../Asset/css/public.css">
+        <link rel="stylesheet" href="../Asset/css/salarie.css">
     <title>Documentation Ajout de Salarié avec carte de visite</title>
   </head>
   <body>
     <h1>Documentation Salariée avec carte de visite</h1>
-    <a class="btn" href="./sans_photo.html">Pour les sans carte de visite, merci de cliquer ici</a>
+    <a class="btn" href="./salarie-sans_carte_visite.html">Pour les sans carte de visite, merci de cliquer ici</a>
     <p>Merci de communiquer les information liée a ce salariés :</p>
     <div class="information">
       <div>
@@ -21,7 +22,7 @@
         <input type="text" id="nom" />
       </div>
       <div>
-        <label for="nom">Mission : </label>
+        <label for="mission">Mission : </label>
         <input type="text" id="mission" />
       </div>
       <button class="codepen-button" onclick="traitement()"><span>Traitement</span></button>
@@ -45,6 +46,6 @@
     </div>
     <div id="resultat"></div>
     <div id="code"></div>
-    <script src="./script.js"></script>
+    <script src="../Asset/js/salaries.js"></script>
   </body>
 </html>

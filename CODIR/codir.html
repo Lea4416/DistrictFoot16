@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="./Asset/images/LogoDistrict.png" />
+    <link rel="stylesheet" href="../Asset/css/public.css">
+    <link rel="stylesheet" href="../Asset/css/codir.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation Comiteé de direction</title>
+</head>
+
+<body>
+    <h1>Bienvenue sur la page de création du comité de direction</h1>
+    <div class="information">
+        <div>
+            <label for="photo">Lien vers la photo WordPress: </label>
+            <input type="text" id="photo" />
+        </div>
+        <div>
+            <label for="nom">Nom Prénom : </label>
+            <input type="text" id="nom" />
+        </div>
+        <div>
+            <label for="titre">Titre : </label>
+            <input type="text" id="titre" />
+        </div>
+        <div>
+            <label for="mission">Mission : </label>
+            <input type="text" id="mission" />
+        </div>
+        <div>
+            <label for="tel">Téléphone : </label>
+            <input type="text" id="tel" />
+        </div>
+        <div>
+            <label for="mail">Mail : </label>
+            <input type="text" id="mail" />
+        </div>
+        <button class="codepen-button" onclick="traitement()"><span>Traitement</span></button>
+    </div>
+    <div id="exemple">
+        <div class="container">
+            <img src="https://foot16.fff.fr/wp-content/uploads/sites/27/2025/09/Jean-Francois-Selle.png"
+                class="portrait" />
+            <div class="container-2">
+                <p class="strong">Jean-François Selle</p>
+                <p class="strong">Président</p>
+                <div class="container-3">
+                    <img src="https://foot16.fff.fr/wp-content/uploads/sites/27/2025/09/phone.png" class="icon" />
+                    <p">06 34 67 21 41</p>
+                </div>
+                <div class="container-3">
+                    <img src="https://foot16.fff.fr/wp-content/uploads/sites/27/2025/09/mail.png" class="icon" />
+                    <p>jfselle@foot16.fff.fr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resultat">
+    </div>
+    <div id="code"></div>
+    <script src="../Asset/js/codir.js"></script>
+</body>
+
+</html>

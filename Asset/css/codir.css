@@ -1,0 +1,40 @@
+.icon{
+    width: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(30, 115, 190, 0.060);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.container-2{
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(0, 49, 114, 0.1);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.container-3{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.portrait{
+    width: 200px; 
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+    background-color: white;
+}
+
+.strong{
+    font-weight: bolder;
+}

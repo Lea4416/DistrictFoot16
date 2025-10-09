@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="../Asset/images/LogoDistrict.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Asset/css/public.css" />
+    <link rel="stylesheet" href="../Asset/css/comissions.css" />
+    <title>Documentation Ajout des membres de commission</title>
+  </head>
+  <body>
+    <h1>Documentation membres de comissions</h1>
+    <div class="information" id="information">
+      <label for="choix_pole">Choisir un pôle :</label>
+      <select id="choix_pole"></select>
+      <button onclick="gestion_comission()">Faire la page du pole</button>
+    </div>
+    <div id="exemple">
+      <h2>Voici un exemple :</h2>
+      <p style="font-size: 1rem; font-weight: bolder; text-align: center">
+        Le pôle citoyenneté est sous la responsabilité de Isabelle Bonneau
+        (Vice-Présidente), et intègre quatre (4) commissions dont la composition
+        est la suivante :
+      </p>
+
+      <div class="container">
+        <h4> Commission Innovation </h4>
+        <h5> Animateur : Georges Bermejo </h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Pierre Fouillet</li>
+          <li>⚽ Pierre Desvages</li>
+          <li>⚽ Jean-Jacques Raboisson</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <h4>Commission Valorisation de l’engagement bénévole</h4>
+        <h5>Animatrice : Isabelle Bonneau</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Christelle Ploquin</li>
+          <li>⚽ Olivier Blancheton</li>
+          <li>⚽ Jean-Louis Hauquin</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <h4> Commission Valeurs, Éthique, Fair Play et Actions citoyennes et solidaires  </h4>
+        <h5>
+          Animatrice: Isabelle Da Silva Carlos
+        </h5>
+        <h5>
+          Membres :
+        </h5>
+        <ul>
+          <li>⚽ Isabelle Bonneau</li>
+          <li>⚽ Isabelle Fontaine</li>
+          <li>⚽ Catherine Portejoie</li>
+          <li>⚽ Karine Vergnaud</li>
+          <li>⚽ Laurent Fouché</li>
+          <li>⚽ Jean-Charles Guiguen</li>
+          <li>⚽ Laurent Lacouture</li>
+          <li>⚽ Jean-Pascal Tixeuil</li>
+          <li>⚽ Yann Terrade</li>
+        </ul>
+      </div>
+
+      <a href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/" > Retour à la présentation des comités </a>
+    </div>
+    <div id="resultat"></div>
+    <div id="code"></div>
+    <script src="../Asset/js/commission.js"></script>
+  </body>
+</html>
