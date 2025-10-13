@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="../Asset/images/LogoDistrict.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Asset/css/public.css" />
+    <link rel="stylesheet" href="../Asset/css/comissions.css" />
+    <title>Documentation Ajout des membres de commission Sportive</title>
+  </head>
+  <body>
+    <h1>Documentation membres de comissions</h1>
+    <div class="information">
+      <h4>Comissions Competitions Seniors</h4>
+      <div>
+        <label for="nb_animateur_competitions_seniors"
+          >Nombre d'animateurs :</label
+        >
+        <input type="number" id="nb_animateur_competitions_seniors" />
+      </div>
+      <div>
+        <label for="nb_membres_competitions_seniors">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_competitions_seniors" />
+      </div>
+      <h4>Comissions Competitions Jeunes</h4>
+      <div>
+        <label for="nb_animateur_competitions_jeunes">Nombre d'animateurs :</label>
+        <input type="number" id="nb_animateur_competitions_jeunes" />
+      </div>
+      <div>
+        <label for="nb_membres_competitions_jeunes">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_competitions_jeunes" />
+      </div>
+            <h4>Comissions du développement du football féminin :</h4>
+      <div>
+        <label for="nb_animateur_football_feminin">Nombre d'animateurs :</label>
+        <input type="number" id="nb_animateur_football_feminin" />
+      </div>
+      <div>
+        <label for="nb_membres_football_feminin">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_football_feminin" />
+      </div>
+            <h4>Comissions de diversification des pratiques :</h4>
+      <div>
+        <label for="nb_animateur_diversification_feminin">Nombre d'animateurs :</label>
+        <input type="number" id="nb_animateur_diversification_feminin" />
+      </div>
+      <div>
+        <label for="nb_membres_diversification_feminin">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_diversification_feminin" />
+      </div>
+            <h4>Comissions Technique - Formation - Labellisation :</h4>
+      <div>
+        <label for="nb_animateur_tech_forma_label">Nombre d'animateurs :</label>
+        <input type="number" id="nb_animateur_tech_forma_label" />
+      </div>
+      <div>
+        <label for="nb_membres_tech_forma_label">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_tech_forma_label" />
+      </div>
+      <button onclick="enregistrement_membres()">Enregistrement des Membres :</button>
+    </div>
+    </div>
+    <div id="exemple">
+      <h2>Voici un exemple :</h2>
+      <p class="bold">
+        Le Pôle sportif est sous la responsabilité de Jean-Charles Guiguen
+        (Vice-Président), et intègre cinq (5) commissions dont la composition
+        est la suivante :
+      </p>
+
+      <div class="container">
+        <h4>Commission des compétitions séniors :</h4>
+        <h5>Animateur : Jean-Charles Guiguen</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Véronique Autexier</li>
+          <li>⚽ Philippe Andrieux</li>
+          <li>⚽ Georges Bermejo</li>
+          <li>⚽ Patrick Bourabier</li>
+          <li>⚽ Philippe Brandy</li>
+          <li>⚽ Manuel Pinaud</li>
+          <li>⚽ Jean-Jacques Raboisson</li>
+          <li>⚽ Bruno Renon</li>
+          <li>⚽ Alain Vedrenne</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h4>Commission des compétitions jeunes :</h4>
+        <h5>Animatrice : Karine Vergnaud</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Isabelle Da Silva Carlos</li>
+          <li>⚽ Fabrice Arnaud</li>
+          <li>⚽ Quentin Cure</li>
+          <li>⚽ Vincent Da Mota Pinto Da Silva</li>
+          <li>⚽ Cédric Picard</li>
+          <li>⚽ Sébastien Rollin</li>
+          <li>⚽ Christophe Seynat</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h4>Commission du développement du football féminin :</h4>
+        <h5>Animateur : Claude Fort</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Sylvie Gautier</li>
+          <li>⚽ Béatrice Gavoille</li>
+          <li>⚽ Jessica Perronnaud</li>
+          <li>⚽ Karine Vergnaud</li>
+          <li>⚽ Sébastien Brault</li>
+          <li>⚽ Ryan Deschamps</li>
+          <li>⚽ Philippe Guegan</li>
+          <li>⚽ Hugues Logeais</li>
+          <li>⚽ Sébastien Poitrimole</li>
+          <li>⚽ Jérôme Richard</li>
+          <li>⚽ Christophe Seynat</li>
+          <li>⚽ Ali Zeboudj</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h4>Commission Diversification des pratiques :</h4>
+        <h5>Animateur : Pierre Fouillet</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Vincent Mourgues</li>
+          <li>⚽ Neill Way</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h4>Commission Technique - Formation - Labellisation :</h4>
+        <h5>Animateur : Christopher Delhomme</h5>
+        <h5>Co-Animateur : Cyrille Louafi</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Léa Bertrand</li>
+          <li>⚽ Nabile Barinchi</li>
+          <li>⚽ Hervé Bichon</li>
+          <li>⚽ Laurent Callarec</li>
+          <li>⚽ Mathieu Couvidat</li>
+          <li>⚽ Antoine Delval</li>
+          <li>⚽ Arnaud Doucet</li>
+          <li>⚽ Maxime Duguy</li>
+          <li>⚽ Muhammad Fodil</li>
+          <li>⚽ Jean-Karim Guébé</li>
+          <li>⚽ Stéphane Laliève</li>
+          <li>⚽ Rudy Lamigeon</li>
+          <li>⚽ Alexandre Limousin</li>
+          <li>⚽ Guillaume Marcombe</li>
+          <li>⚽ Quentin Mignonneaud</li>
+          <li>⚽ José Rodrigues</li>
+          <li>⚽ Maxime Sazarin</li>
+          <li>⚽ Romain Tardieu</li>
+          <li>⚽ Raphaël Vigneron</li>
+        </ul>
+      </div>
+      <a
+        href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/"
+        >Retour à la présentation des comités
+      </a>
+    </div>
+    <div id="resultat"></div>
+    <div id="code"></div>
+    <script src="../Asset/js/commission.js"></script>
+  </body>
+</html>

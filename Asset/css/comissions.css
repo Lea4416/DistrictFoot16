@@ -34,15 +34,21 @@ ul {
   gap: 5px;
 }
 
-a{
-     display: block;
-          margin: 0 auto;
-          padding: 20px;
-          border-radius: 20px;
-          background-color: rgb(0, 0, 255);
-          width: 40%;
-          color: white;
-          border: 1px solid black;
-          text-align: center;
-          text-decoration: none;
+a {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(0, 0, 255);
+  width: 40%;
+  color: white;
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bold{
+  font-size: 1rem; 
+  font-weight: bolder;
+  text-align: center;
 }
