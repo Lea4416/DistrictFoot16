@@ -11,6 +11,19 @@
   margin-bottom: 10px;
 }
 
+.container_administratif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid black;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 40px;
+  background-color: rgba(125, 15, 81, 0.25);
+  margin-bottom: 10px;
+}
+
 h4 {
   text-decoration: underline;
   margin: 5px;
@@ -47,8 +60,15 @@ a {
   text-decoration: none;
 }
 
-.bold{
-  font-size: 1rem; 
+.bold {
+  font-size: 1rem;
   font-weight: bolder;
   text-align: center;
+}
+
+#information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }

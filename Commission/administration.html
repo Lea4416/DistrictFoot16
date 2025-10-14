@@ -11,67 +11,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Asset/css/public.css" />
     <link rel="stylesheet" href="../Asset/css/comissions.css" />
-    <title>Documentation Ajout des membres de commission Page 2</title>
+    <title>Documentation Ajout des membres de commission Administration</title>
   </head>
   <body>
-    <h1>Documentation membres de comissions</h1>
-    <div class="information" id="information">
-      <label for="choix_pole">Choisir un pôle :</label>
-      <select id="choix_pole"></select>
-      <button onclick="gestion_comission()">Faire la page du pole</button>
+    <h1>Documentation membres de commissions administratif</h1>
+    <div id="information">
+      <h4>Commissions Logistique - Intendance - Immobilier :</h4>
+      <div>
+        <label for="nb_animateur_logistique_intendance_immobilier"
+          >Nombre d'animateurs :</label
+        >
+        <input type="number" id="nb_animateur_logistique_intendance_immobilier" />
+      </div>
+      <div>
+        <label for="nb_membres_logistique_intendance_immobilier">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_logistique_intendance_immobilier" />
+      </div>
+      <h4>Commissions Terrain et Structure Sportive</h4>
+      <div>
+        <label for="nb_animateur_terrain_structure">Nombre d'animateurs :</label>
+        <input type="number" id="nb_animateur_terrain_structure" />
+      </div>
+      <div>
+        <label for="nb_membresr_terrain_structure">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_terrain_structure" />
+      </div>
+            <h4>Commissions Santé Hygiéne et Prévention :</h4>
+      <div>
+        <label for="nb_animateur_tech_forma_label">Nombre d'animateurs :</label>
+        <input type="number" id="nb_animateur_tech_forma_label" />
+      </div>
+      <div>
+        <label for="nb_membres_tech_forma_label">Nombre de Membres :</label>
+        <input type="number" id="nb_membres_tech_forma_label" />
+      </div>
+      <button onclick="genererChamps()">Valider les nombres</button>
+    </div>
     </div>
     <div id="exemple">
       <h2>Voici un exemple :</h2>
-      <p style="font-size: 1rem; font-weight: bolder; text-align: center">
-        Le pôle citoyenneté est sous la responsabilité de Isabelle Bonneau
-        (Vice-Présidente), et intègre quatre (4) commissions dont la composition
-        est la suivante :
-      </p>
+       <p style="font-size: 1rem; font-weight: bolder; text-align: center;">
+  Le Pôle Administration est sous la responsabilité de Laurent Fouché
+  (Secrétaire général), et intègre trois (3) commissions dont la composition
+  est la suivante :
+</p>
 
-      <div class="container">
-        <h4> Commission Innovation </h4>
-        <h5> Animateur : Georges Bermejo </h5>
-        <h5>Membres :</h5>
-        <ul>
-          <li>⚽ Pierre Fouillet</li>
-          <li>⚽ Pierre Desvages</li>
-          <li>⚽ Jean-Jacques Raboisson</li>
-        </ul>
-      </div>
+<div class="information">
+  <div class="container_administratif">
+  <h4>Commission Logistique - Intendance - Immobilier :</h4>
+  <h5>Animateur : Philippe Andrieux (Logistique - Intendance)</h5>
+  <h5>Animateur : Philippe Brandy (Immobilier)</h5>
+  <h5>Membres :</h5>
+  <ul>
+    <li>⚽ Isabelle Da Silva Carlos</li>
+    <li>⚽ Patrick Bourabier</li>
+    <li>⚽ David Ferrand</li>
+    <li>⚽ Bruno Renon</li>
+  </ul>
+</div>
 
-      <div class="container">
-        <h4>Commission Valorisation de l’engagement bénévole</h4>
-        <h5>Animatrice : Isabelle Bonneau</h5>
-        <h5>Membres :</h5>
-        <ul>
-          <li>⚽ Christelle Ploquin</li>
-          <li>⚽ Olivier Blancheton</li>
-          <li>⚽ Jean-Louis Hauquin</li>
-        </ul>
-      </div>
+<div class="container_administratif">
+  <h4>Commission Terrains et infrastructures sportives</h4>
+  <h5>Animateur : Max Roulon</h5>
+  <h5>Membres :</h5>
+  <ul>
+    <li>⚽ Véronique Autexier</li>
+    <li>⚽ Joël Armand</li>
+    <li>⚽ Didier Aubin</li>
+    <li>⚽ Olivier Blancheton</li>
+    <li>⚽ Christian Clochard</li>
+    <li>⚽ Jean-Marie Fourgeau</li>
+    <li>⚽ Jean-François Selle</li>
+  </ul>
+</div>
 
-      <div class="container">
-        <h4> Commission Valeurs, Éthique, Fair Play et Actions citoyennes et solidaires  </h4>
-        <h5>
-          Animatrice: Isabelle Da Silva Carlos
-        </h5>
-        <h5>
-          Membres :
-        </h5>
-        <ul>
-          <li>⚽ Isabelle Bonneau</li>
-          <li>⚽ Isabelle Fontaine</li>
-          <li>⚽ Catherine Portejoie</li>
-          <li>⚽ Karine Vergnaud</li>
-          <li>⚽ Laurent Fouché</li>
-          <li>⚽ Jean-Charles Guiguen</li>
-          <li>⚽ Laurent Lacouture</li>
-          <li>⚽ Jean-Pascal Tixeuil</li>
-          <li>⚽ Yann Terrade</li>
-        </ul>
-      </div>
+<div class="container_administratif">
+  <h4>Commission Santé - Hygiène - Prévention</h4>
+  <h5>Animateur : Patrick Bourgoin</h5>
+  <h5>Membres :</h5>
+  <ul>
+    <li>⚽ Isabelle Da Silva Carlos</li>
+    <li>⚽ Joëlle Rousseau</li>
+    <li>⚽ Georges Bermejo</li>
+    <li>⚽ Jean-Pierre Blaquart</li>
+    <li>⚽ Patrick Mena</li>
+  </ul>
+</div>
 
-      <a href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/" > Retour à la présentation des comités </a>
+<a href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/">
+  Retour à la présentation des comités
+</a>
     </div>
     <div id="resultat"></div>
     <div id="code"></div>

@@ -14,9 +14,9 @@
     <title>Documentation Ajout des membres de commission Sportive</title>
   </head>
   <body>
-    <h1>Documentation membres de comissions</h1>
-    <div class="information">
-      <h4>Comissions Competitions Seniors</h4>
+    <h1>Documentation membres de commissions Sportive</h1>
+    <div id="information">
+      <h4>Commissions Competitions Seniors</h4>
       <div>
         <label for="nb_animateur_competitions_seniors"
           >Nombre d'animateurs :</label
@@ -27,7 +27,7 @@
         <label for="nb_membres_competitions_seniors">Nombre de Membres :</label>
         <input type="number" id="nb_membres_competitions_seniors" />
       </div>
-      <h4>Comissions Competitions Jeunes</h4>
+      <h4>Commissions Competitions Jeunes</h4>
       <div>
         <label for="nb_animateur_competitions_jeunes">Nombre d'animateurs :</label>
         <input type="number" id="nb_animateur_competitions_jeunes" />
@@ -36,7 +36,7 @@
         <label for="nb_membres_competitions_jeunes">Nombre de Membres :</label>
         <input type="number" id="nb_membres_competitions_jeunes" />
       </div>
-            <h4>Comissions du développement du football féminin :</h4>
+            <h4>Commissions du développement du football féminin :</h4>
       <div>
         <label for="nb_animateur_football_feminin">Nombre d'animateurs :</label>
         <input type="number" id="nb_animateur_football_feminin" />
@@ -45,7 +45,7 @@
         <label for="nb_membres_football_feminin">Nombre de Membres :</label>
         <input type="number" id="nb_membres_football_feminin" />
       </div>
-            <h4>Comissions de diversification des pratiques :</h4>
+            <h4>Commissions de diversification des pratiques :</h4>
       <div>
         <label for="nb_animateur_diversification_feminin">Nombre d'animateurs :</label>
         <input type="number" id="nb_animateur_diversification_feminin" />
@@ -54,7 +54,7 @@
         <label for="nb_membres_diversification_feminin">Nombre de Membres :</label>
         <input type="number" id="nb_membres_diversification_feminin" />
       </div>
-            <h4>Comissions Technique - Formation - Labellisation :</h4>
+            <h4>Commissions Technique - Formation - Labellisation :</h4>
       <div>
         <label for="nb_animateur_tech_forma_label">Nombre d'animateurs :</label>
         <input type="number" id="nb_animateur_tech_forma_label" />
@@ -63,7 +63,7 @@
         <label for="nb_membres_tech_forma_label">Nombre de Membres :</label>
         <input type="number" id="nb_membres_tech_forma_label" />
       </div>
-      <button onclick="enregistrement_membres()">Enregistrement des Membres :</button>
+      <button onclick="genererChamps()">Valider les nombres</button>
     </div>
     </div>
     <div id="exemple">
@@ -166,6 +166,6 @@
     </div>
     <div id="resultat"></div>
     <div id="code"></div>
-    <script src="../Asset/js/commission.js"></script>
+    <script src="../Asset/js/sportif.js"></script>
   </body>
 </html>
