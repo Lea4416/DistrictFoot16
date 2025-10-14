@@ -1,16 +1,13 @@
 // --- Liste des commissions ---
 let commissions = [
-  "Commission des compétitions seniors",
-  "Commission des compétitions jeunes",
-  "Commission du développement du football féminin",
-  "Commission diversification des pratiques",
-  "Commission Technique - Formation - Labellisation",
+  "Commission Innovation",
+  "Commission Valorisation de l’engagement bénévole",
+  "Commission Valeurs, Éthique, Fair-play et Actions citoyennes et solidaires",
 ];
 
 // --- Tableaux pour stocker les nombres ---
 let nbAnimateurs = [];
 let nbMembres = [];
-document.getElementById("code").style.display = "none";
 
 
 // --- Étape 1 : Lecture des nombres et création des champs de saisie ---
@@ -21,42 +18,28 @@ function genererChamps() {
 
   // On récupère les valeurs
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_competitions_seniors").value)
+    Number(document.getElementById("nb_animateur_innovation").value)
   );
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_competitions_jeunes").value)
+    Number(document.getElementById("nb_animateur_valorisation_benevole").value)
   );
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_football_feminin").value)
-  );
-  nbAnimateurs.push(
-    Number(
-      document.getElementById("nb_animateur_diversification_feminin").value
-    )
-  );
-  nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_tech_forma_label").value)
+    Number(document.getElementById("nb_animateur_valeur_ethique").value)
   );
 
   nbMembres.push(
-    Number(document.getElementById("nb_membres_competitions_seniors").value)
+    Number(document.getElementById("nb_membres_innovation").value)
   );
   nbMembres.push(
-    Number(document.getElementById("nb_membres_competitions_jeunes").value)
+    Number(document.getElementById("nb_membres_valorisation_benevole").value)
   );
   nbMembres.push(
-    Number(document.getElementById("nb_membres_football_feminin").value)
-  );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_diversification_feminin").value)
-  );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_tech_forma_label").value)
+    Number(document.getElementById("nb_membres_valeur_ethique").value)
   );
 
-  // Sauvegarde dans le stockage
+    // Sauvegarde dans le stockage
   sessionStorage.setItem("nbAnimateurs", JSON.stringify(nbAnimateurs));
-  sessionStorage.setItem("nbMembres", JSON.stringify(nbMembres));
+  sessionStorage.setItem("nbMembres", JSON.stringify(nbMembres))
 
   // --- Génération des champs de texte ---
   let container = document.getElementById("information");
@@ -138,17 +121,17 @@ function enregistrerNoms() {
 function afficherResultats(animateurs, membres) {
   let container = document.getElementById("information");
   document.getElementById("exemple").innerHTML = "";
+  const codeDiv = document.getElementById("code");
+
   container.innerHTML = "";
   container.innerHTML = "<h2>Résultats enregistrés :</h2>";
-  document.getElementById("code").style.display = "block";
-
 
   for (let i = 0; i < commissions.length; i++) {
     let bloc = document.createElement("div");
     bloc.classList.add("commission-resultat");
 
     let p = `
-  <div class="container_sportif">
+  <div class="container_citoyennete">
     <h4>${commissions[i]} :</h4>
     ${
       animateurs[i].length > 0
@@ -224,7 +207,11 @@ function afficherResultats(animateurs, membres) {
 
     bloc.innerHTML = p
 
-    document.getElementById("code").innerHTML += `<pre><code>${pc.replace(/</g, "&lt;").replace(/>/g, "&gt;")}`
+
+console.log(document.getElementById("code"));
+
+
+    document.getElementById("code").innerHTML += `<pre><code>${pc.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>`
 
     container.appendChild(bloc);
   }

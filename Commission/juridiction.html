@@ -11,70 +11,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Asset/css/public.css" />
     <link rel="stylesheet" href="../Asset/css/comissions.css" />
-    <title>Documentation Ajout des membres de commission Page 2</title>
+    <title>Documentation Ajout des membres de commission Juridiction</title>
   </head>
   <body>
-    <h1>Documentation membres de comissions</h1>
-    <div class="information" id="information">
-      <label for="choix_pole">Choisir un pôle :</label>
-      <select id="choix_pole"></select>
-      <button onclick="gestion_comission()">Faire la page du pole</button>
-    </div>
+    <h1>Documentation membres de commissions Juridiction</h1>
+    <form>
+      <div id="information">
+        <h4>Commission de discipline</h4>
+        <div>
+          <label for="nb_animateur_discipline">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_discipline" />
+        </div>
+        <div>
+          <label for="nb_membres_innovation">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_discipline" />
+        </div>
+
+        <h4>Commission d'Appel</h4>
+        <div>
+          <label for="nb_animateur_appel">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_appel" />
+        </div>
+        <div>
+          <label for="nb_membres_appel">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_appel" />
+        </div>
+
+        <h4>Commission "Statuts - Règlements"</h4>
+        <div>
+          <label for="nb_animateur_statut_reglement"
+            >Nombre d'animateurs :</label
+          >
+          <input type="number" id="nb_animateur_statut_reglement" />
+        </div>
+        <div>
+          <label for="nb_membres_statut_reglement">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_statut_reglement" />
+        </div>
+
+        <h4>Commission "Litiges - Contentieux"</h4>
+        <div>
+          <label for="nb_animateur_litiges_contentieux"
+            >Nombre d'animateurs :</label
+          >
+          <input type="number" id="nb_animateur_litiges_contentieux" />
+        </div>
+        <div>
+          <label for="nb_membres_litiges_contentieux"
+            >Nombre de Membres :</label
+          >
+          <input type="number" id="nb_membres_litiges_contentieux" />
+        </div>
+
+        <h4>Surveillance des opérations électorales</h4>
+        <div>
+          <label for="nb_animateur_electorales">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_electorales" />
+        </div>
+        <div>
+          <label for="nb_membres_electorales">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_electorales" />
+        </div>
+
+        <button type="button" onclick="genererChamps()">
+          Valider les nombres
+        </button>
+      </div>
+    </form>
+
     <div id="exemple">
-      <h2>Voici un exemple :</h2>
-      <p style="font-size: 1rem; font-weight: bolder; text-align: center">
-        Le pôle citoyenneté est sous la responsabilité de Isabelle Bonneau
-        (Vice-Présidente), et intègre quatre (4) commissions dont la composition
-        est la suivante :
+      <p class="bold">
+        Le Pôle Juridiction est sous la responsabilité de Laurent Fouché
+        (Secrétaire général), et intègre cinq (5) commissions dont la
+        composition est la suivante :
       </p>
 
-      <div class="container">
-        <h4> Commission Innovation </h4>
-        <h5> Animateur : Georges Bermejo </h5>
+      <div class="container_juridiction">
+        <h4>Commission de discipline</h4>
+        <h5>Président : Marcel Buisson</h5>
         <h5>Membres :</h5>
         <ul>
-          <li>⚽ Pierre Fouillet</li>
-          <li>⚽ Pierre Desvages</li>
+          <li>⚽ Patricia Crapoulet</li>
+          <li>⚽ Kelly Tondelier Pariolleau</li>
+          <li>⚽ Didier Aubin</li>
+          <li>⚽ Rachid Ben Ahmed</li>
+          <li>⚽ Luc Derqué</li>
+          <li>⚽ Thierry Faucoulanche</li>
+          <li>⚽ Bruno Renon</li>
+        </ul>
+        <h5>Instructeurs :</h5>
+        <ul>
+          <li>⚽ Jean-Marc Ferchaud</li>
+          <li>⚽ Laurent Parizel</li>
+          <li>⚽ Jean-Louis Puaud</li>
+          <li>⚽ Frédéric Rondeau</li>
+        </ul>
+      </div>
+      <div class="container_juridiction">
+        <h4>Commission d'Appel</h4>
+        <h5>Animateur : Pierre Larrouy</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Georges Bermejo</li>
+          <li>⚽ Philippe Chat</li>
+          <li>⚽ Patrick Frugier</li>
+          <li>⚽ Philippe Paulhac</li>
+          <li>⚽ Eric Thouraud</li>
+        </ul>
+      </div>
+      <div class="container_juridiction">
+        <h4>Commission "Statuts - Règlements"</h4>
+        <h5>Animateur : Jaques Noble</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Karine Vergnaud</li>
+          <li>⚽ Laurent Fouché</li>
+          <li>⚽ Claude Fort</li>
+          <li>⚽ Bruno Renon</li>
+          <li>⚽ Yadaly Sacko</li>
+        </ul>
+      </div>
+      <div class="container_juridiction">
+        <h4>Commission "Litiges - Contentieux"</h4>
+        <h5>Animateur : Jean-Louis Puaud</h5>
+        <h5>Membres :</h5>
+        <ul>
+          <li>⚽ Philippe Brandy</li>
+          <li>⚽ Patrick Bourabier</li>
+          <li>⚽ Richard Corbiat</li>
+          <li>⚽ Serge Dorain</li>
+          <li>⚽ Jean-Marc Ferchaud</li>
           <li>⚽ Jean-Jacques Raboisson</li>
         </ul>
       </div>
-
-      <div class="container">
-        <h4>Commission Valorisation de l’engagement bénévole</h4>
-        <h5>Animatrice : Isabelle Bonneau</h5>
+      <div class="container_juridiction">
+        <h4>Surveillance des opérations électorales</h4>
+        <h5>Animateur : Serge Dorain</h5>
         <h5>Membres :</h5>
         <ul>
-          <li>⚽ Christelle Ploquin</li>
-          <li>⚽ Olivier Blancheton</li>
-          <li>⚽ Jean-Louis Hauquin</li>
+          <li>⚽ Patrick Bourabier</li>
+          <li>⚽ Jean-Louis Dauphin</li>
+          <li>⚽ Julien Gouguet</li>
+          <li>⚽ Alain Marcombe</li>
+          <li>⚽ Jacky Philippe Michelet</li>
         </ul>
       </div>
-
-      <div class="container">
-        <h4> Commission Valeurs, Éthique, Fair Play et Actions citoyennes et solidaires  </h4>
-        <h5>
-          Animatrice: Isabelle Da Silva Carlos
-        </h5>
-        <h5>
-          Membres :
-        </h5>
-        <ul>
-          <li>⚽ Isabelle Bonneau</li>
-          <li>⚽ Isabelle Fontaine</li>
-          <li>⚽ Catherine Portejoie</li>
-          <li>⚽ Karine Vergnaud</li>
-          <li>⚽ Laurent Fouché</li>
-          <li>⚽ Jean-Charles Guiguen</li>
-          <li>⚽ Laurent Lacouture</li>
-          <li>⚽ Jean-Pascal Tixeuil</li>
-          <li>⚽ Yann Terrade</li>
-        </ul>
-      </div>
-
-      <a href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/" > Retour à la présentation des comités </a>
+      <a>Retour à la présentation des comités </a>
     </div>
+
     <div id="resultat"></div>
     <div id="code"></div>
-    <script src="../Asset/js/commission.js"></script>
+
+    <script src="../Asset/js/juridiction.js"></script>
   </body>
 </html>

@@ -11,26 +11,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Asset/css/public.css" />
     <link rel="stylesheet" href="../Asset/css/comissions.css" />
-    <title>Documentation Ajout des membres de commission Page 2</title>
+    <title>
+      Documentation Ajout des membres de commission Arbitrage - Officiel
+    </title>
   </head>
   <body>
-    <h1>Documentation membres de comissions</h1>
-    <div class="information" id="information">
-      <label for="choix_pole">Choisir un pôle :</label>
-      <select id="choix_pole"></select>
-      <button onclick="gestion_comission()">Faire la page du pole</button>
-    </div>
+    <h1>Documentation membres de commissions Citoyenneté</h1>
+    <form>
+      <div id="information">
+        <h4>Commissions de l'Innovation</h4>
+        <div>
+          <label for="nb_animateur_innovation">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_innovation" />
+        </div>
+        <div>
+          <label for="nb_membres_innovation">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_innovation" />
+        </div>
+
+        <h4>Commissions Valorisation de l’engagement bénévole</h4>
+        <div>
+          <label for="nb_animateur_valorisation_benevole"
+            >Nombre d'animateurs :</label
+          >
+          <input type="number" id="nb_animateur_valorisation_benevole" />
+        </div>
+        <div>
+          <label for="nb_membres_valorisation_benevole"
+            >Nombre de Membres :</label
+          >
+          <input type="number" id="nb_membres_valorisation_benevole" />
+        </div>
+
+        <h4>
+          Commissions Valeurs, Éthique, Fair-play et Actions citoyennes et
+          solidaires
+        </h4>
+        <div>
+          <label for="nb_animateur_valeur_ethique">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_valeur_ethique" />
+        </div>
+        <div>
+          <label for="nb_membres_valeur_ethique">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_valeur_ethique" />
+        </div>
+
+        <button type="button" onclick="genererChamps()">
+          Valider les nombres
+        </button>
+      </div>
+    </form>
+
     <div id="exemple">
-      <h2>Voici un exemple :</h2>
-      <p style="font-size: 1rem; font-weight: bolder; text-align: center">
+      &nbsp;
+      <p class="bold">
         Le pôle citoyenneté est sous la responsabilité de Isabelle Bonneau
         (Vice-Présidente), et intègre quatre (4) commissions dont la composition
         est la suivante :
       </p>
 
-      <div class="container">
-        <h4> Commission Innovation </h4>
-        <h5> Animateur : Georges Bermejo </h5>
+      <div class="container_citoyennete">
+        <h4>Commission Innovation</h4>
+        <h5>Animateur : Georges Bermejo</h5>
         <h5>Membres :</h5>
         <ul>
           <li>⚽ Pierre Fouillet</li>
@@ -38,8 +80,7 @@
           <li>⚽ Jean-Jacques Raboisson</li>
         </ul>
       </div>
-
-      <div class="container">
+      <div class="container_citoyennete">
         <h4>Commission Valorisation de l’engagement bénévole</h4>
         <h5>Animatrice : Isabelle Bonneau</h5>
         <h5>Membres :</h5>
@@ -49,15 +90,13 @@
           <li>⚽ Jean-Louis Hauquin</li>
         </ul>
       </div>
-
-      <div class="container">
-        <h4> Commission Valeurs, Éthique, Fair Play et Actions citoyennes et solidaires  </h4>
-        <h5>
-          Animatrice: Isabelle Da Silva Carlos
-        </h5>
-        <h5>
-          Membres :
-        </h5>
+      <div class="container_citoyennete">
+        <h4>
+          Commission Valeurs, Éthique, Fair-play et Actions citoyennes et
+          solidaires
+        </h4>
+        <h5>Animatrice : Isabelle Da Silva Carlos</h5>
+        <h5>Membres :</h5>
         <ul>
           <li>⚽ Isabelle Bonneau</li>
           <li>⚽ Isabelle Fontaine</li>
@@ -70,11 +109,15 @@
           <li>⚽ Yann Terrade</li>
         </ul>
       </div>
-
-      <a href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/" > Retour à la présentation des comités </a>
+      <a
+        href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/"
+        >Retour à la présentation des comités
+      </a>
     </div>
+
     <div id="resultat"></div>
     <div id="code"></div>
-    <script src="../Asset/js/commission.js"></script>
+
+    <script src="../Asset/js/citoyennete.js"></script>
   </body>
 </html>

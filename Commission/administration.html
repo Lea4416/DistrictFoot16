@@ -15,50 +15,52 @@
   </head>
   <body>
     <h1>Documentation membres de commissions administratif</h1>
-    <div id="information">
-      <h4>Commissions Logistique - Intendance - Immobilier :</h4>
-      <div>
-        <label for="nb_animateur_logistique_intendance_immobilier"
-          >Nombre d'animateurs :</label
-        >
-        <input type="number" id="nb_animateur_logistique_intendance_immobilier" />
+
+    <form action="">
+      <div id="information">
+        <h4>Commissions Logistique - Intendance - Immobilier :</h4>
+        <div>
+          <label for="nb_animateur_logistique_intendance_immobilier">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_logistique_intendance_immobilier" />
+        </div>
+        <div>
+          <label for="nb_membres_logistique_intendance_immobilier">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_logistique_intendance_immobilier" />
+        </div>
+
+        <h4>Commissions Terrain et Structure Sportive</h4>
+        <div>
+          <label for="nb_animateur_terrain_structure">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_terrain_structure" />
+        </div>
+        <div>
+          <label for="nb_membres_terrain_structure">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_terrain_structure" />
+        </div>
+
+        <h4>Commissions Santé Hygiène et Prévention :</h4>
+        <div>
+          <label for="nb_animateur_tech_forma_label">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_tech_forma_label" />
+        </div>
+        <div>
+          <label for="nb_membres_tech_forma_label">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_tech_forma_label" />
+        </div>
+
+        <button type="button" onclick="genererChamps()">Valider les nombres</button>
       </div>
-      <div>
-        <label for="nb_membres_logistique_intendance_immobilier">Nombre de Membres :</label>
-        <input type="number" id="nb_membres_logistique_intendance_immobilier" />
-      </div>
-      <h4>Commissions Terrain et Structure Sportive</h4>
-      <div>
-        <label for="nb_animateur_terrain_structure">Nombre d'animateurs :</label>
-        <input type="number" id="nb_animateur_terrain_structure" />
-      </div>
-      <div>
-        <label for="nb_membresr_terrain_structure">Nombre de Membres :</label>
-        <input type="number" id="nb_membres_terrain_structure" />
-      </div>
-            <h4>Commissions Santé Hygiéne et Prévention :</h4>
-      <div>
-        <label for="nb_animateur_tech_forma_label">Nombre d'animateurs :</label>
-        <input type="number" id="nb_animateur_tech_forma_label" />
-      </div>
-      <div>
-        <label for="nb_membres_tech_forma_label">Nombre de Membres :</label>
-        <input type="number" id="nb_membres_tech_forma_label" />
-      </div>
-      <button onclick="genererChamps()">Valider les nombres</button>
-    </div>
-    </div>
+    </form>
+
     <div id="exemple">
       <h2>Voici un exemple :</h2>
-       <p style="font-size: 1rem; font-weight: bolder; text-align: center;">
+       <p class="bold">
   Le Pôle Administration est sous la responsabilité de Laurent Fouché
   (Secrétaire général), et intègre trois (3) commissions dont la composition
   est la suivante :
 </p>
-
-<div class="information">
   <div class="container_administratif">
-  <h4>Commission Logistique - Intendance - Immobilier :</h4>
+  <h4>Commission Logistique - Intendance - Immobilier</h4>
   <h5>Animateur : Philippe Andrieux (Logistique - Intendance)</h5>
   <h5>Animateur : Philippe Brandy (Immobilier)</h5>
   <h5>Membres :</h5>
@@ -102,8 +104,10 @@
   Retour à la présentation des comités
 </a>
     </div>
+
     <div id="resultat"></div>
     <div id="code"></div>
-    <script src="../Asset/js/commission.js"></script>
+
+    <script src="../Asset/js/administration.js"></script>
   </body>
 </html>

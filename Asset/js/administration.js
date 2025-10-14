@@ -1,17 +1,17 @@
 // --- Liste des commissions ---
 let commissions = [
-  "Commission des compétitions seniors",
-  "Commission des compétitions jeunes",
-  "Commission du développement du football féminin",
-  "Commission diversification des pratiques",
-  "Commission Technique - Formation - Labellisation",
+  "Commission Logistique - Intendance - Immobilier",
+  "Commission Terrains et infrastructures sportives",
+  "Commission Santé - Hygiène - Prévention",
 ];
 
 // --- Tableaux pour stocker les nombres ---
 let nbAnimateurs = [];
 let nbMembres = [];
-document.getElementById("code").style.display = "none";
 
+function test(){
+    document.getElementById("test").innerHTML = "Test"
+}
 
 // --- Étape 1 : Lecture des nombres et création des champs de saisie ---
 function genererChamps() {
@@ -21,42 +21,28 @@ function genererChamps() {
 
   // On récupère les valeurs
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_competitions_seniors").value)
+    Number(document.getElementById("nb_animateur_logistique_intendance_immobilier").value)
   );
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_competitions_jeunes").value)
-  );
-  nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_football_feminin").value)
-  );
-  nbAnimateurs.push(
-    Number(
-      document.getElementById("nb_animateur_diversification_feminin").value
-    )
+    Number(document.getElementById("nb_animateur_terrain_structure").value)
   );
   nbAnimateurs.push(
     Number(document.getElementById("nb_animateur_tech_forma_label").value)
   );
 
   nbMembres.push(
-    Number(document.getElementById("nb_membres_competitions_seniors").value)
+    Number(document.getElementById("nb_membres_logistique_intendance_immobilier").value)
   );
   nbMembres.push(
-    Number(document.getElementById("nb_membres_competitions_jeunes").value)
-  );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_football_feminin").value)
-  );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_diversification_feminin").value)
+    Number(document.getElementById("nb_membres_terrain_structure").value)
   );
   nbMembres.push(
     Number(document.getElementById("nb_membres_tech_forma_label").value)
   );
 
-  // Sauvegarde dans le stockage
+    // Sauvegarde dans le stockage
   sessionStorage.setItem("nbAnimateurs", JSON.stringify(nbAnimateurs));
-  sessionStorage.setItem("nbMembres", JSON.stringify(nbMembres));
+  sessionStorage.setItem("nbMembres", JSON.stringify(nbMembres))
 
   // --- Génération des champs de texte ---
   let container = document.getElementById("information");
@@ -138,17 +124,17 @@ function enregistrerNoms() {
 function afficherResultats(animateurs, membres) {
   let container = document.getElementById("information");
   document.getElementById("exemple").innerHTML = "";
+  const codeDiv = document.getElementById("code");
+
   container.innerHTML = "";
   container.innerHTML = "<h2>Résultats enregistrés :</h2>";
-  document.getElementById("code").style.display = "block";
-
 
   for (let i = 0; i < commissions.length; i++) {
     let bloc = document.createElement("div");
     bloc.classList.add("commission-resultat");
 
     let p = `
-  <div class="container_sportif">
+  <div class="container_administratif">
     <h4>${commissions[i]} :</h4>
     ${
       animateurs[i].length > 0
@@ -175,7 +161,7 @@ function afficherResultats(animateurs, membres) {
   width: 80%;
   margin: 0 auto 10px auto;
   border-radius: 40px;
-  background-color: rgba(72, 0, 100, 0.25);
+  background-color: rgba(125, 15, 81, 0.25);
 ">
   <h4 style="
     text-decoration: underline;
@@ -224,7 +210,11 @@ function afficherResultats(animateurs, membres) {
 
     bloc.innerHTML = p
 
-    document.getElementById("code").innerHTML += `<pre><code>${pc.replace(/</g, "&lt;").replace(/>/g, "&gt;")}`
+
+console.log(document.getElementById("code"));
+
+
+    document.getElementById("code").innerHTML += `<pre><code>${pc.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>`
 
     container.appendChild(bloc);
   }

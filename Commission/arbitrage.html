@@ -11,70 +11,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Asset/css/public.css" />
     <link rel="stylesheet" href="../Asset/css/comissions.css" />
-    <title>Documentation Ajout des membres de commission Page 2</title>
+    <title>Documentation Ajout des membres de commission Arbitrage - Officiel</title>
   </head>
   <body>
-    <h1>Documentation membres de comissions</h1>
-    <div class="information" id="information">
-      <label for="choix_pole">Choisir un pôle :</label>
-      <select id="choix_pole"></select>
-      <button onclick="gestion_comission()">Faire la page du pole</button>
-    </div>
+    <h1>Documentation membres de commissions Arbitrage</h1>
+    <form action="">
+      <div id="information">
+        <h4>Commissions de l'Arbitrage</h4>
+        <div>
+          <label for="nb_animateur_arbitrage">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_arbitrage" />
+        </div>
+        <div>
+          <label for="nb_membres_arbitrage">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_arbitrage" />
+        </div>
+
+        <h4>Commissions Statut de l'Arbitrage</h4>
+        <div>
+          <label for="nb_animateur_statut_arbitrage">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_statut_arbitrage" />
+        </div>
+        <div>
+          <label for="nb_membres_statut_arbitrage">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_statut_arbitrage" />
+        </div>
+
+        <h4>Commissions délégués</h4>
+        <div>
+          <label for="nb_animateur_delegue">Nombre d'animateurs :</label>
+          <input type="number" id="nb_animateur_delegue" />
+        </div>
+        <div>
+          <label for="nb_membres_delegue">Nombre de Membres :</label>
+          <input type="number" id="nb_membres_delegue" />
+        </div>
+
+        <button type="button" onclick="genererChamps()">Valider les nombres</button>
+      </div>
+    </form>
+
     <div id="exemple">
-      <h2>Voici un exemple :</h2>
-      <p style="font-size: 1rem; font-weight: bolder; text-align: center">
-        Le pôle citoyenneté est sous la responsabilité de Isabelle Bonneau
-        (Vice-Présidente), et intègre quatre (4) commissions dont la composition
-        est la suivante :
-      </p>
+<p style="font-size: 1rem; font-weight: bolder; text-align: center;">Le Pôle Arbitrage - Officiels est sous la responsabilité de Yann Terrade (Vice - Président), et intègre trois (3) commissions dont la composition est la suivante :</p>
 
-      <div class="container">
-        <h4> Commission Innovation </h4>
-        <h5> Animateur : Georges Bermejo </h5>
-        <h5>Membres :</h5>
-        <ul>
-          <li>⚽ Pierre Fouillet</li>
-          <li>⚽ Pierre Desvages</li>
-          <li>⚽ Jean-Jacques Raboisson</li>
-        </ul>
-      </div>
-
-      <div class="container">
-        <h4>Commission Valorisation de l’engagement bénévole</h4>
-        <h5>Animatrice : Isabelle Bonneau</h5>
-        <h5>Membres :</h5>
-        <ul>
-          <li>⚽ Christelle Ploquin</li>
-          <li>⚽ Olivier Blancheton</li>
-          <li>⚽ Jean-Louis Hauquin</li>
-        </ul>
-      </div>
-
-      <div class="container">
-        <h4> Commission Valeurs, Éthique, Fair Play et Actions citoyennes et solidaires  </h4>
-        <h5>
-          Animatrice: Isabelle Da Silva Carlos
-        </h5>
-        <h5>
-          Membres :
-        </h5>
-        <ul>
-          <li>⚽ Isabelle Bonneau</li>
-          <li>⚽ Isabelle Fontaine</li>
-          <li>⚽ Catherine Portejoie</li>
-          <li>⚽ Karine Vergnaud</li>
-          <li>⚽ Laurent Fouché</li>
-          <li>⚽ Jean-Charles Guiguen</li>
-          <li>⚽ Laurent Lacouture</li>
-          <li>⚽ Jean-Pascal Tixeuil</li>
-          <li>⚽ Yann Terrade</li>
-        </ul>
-      </div>
-
-      <a href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/" > Retour à la présentation des comités </a>
+<div class="container_arbitrage">
+<h4 class="bold">Commission de l'Arbitrage</h4>
+<h5>Animateur : Yann Terrade</h5>
+<h5>Membres :</h5>
+<ul>
+ 	<li>⚽ Loana Brun</li>
+ 	<li>⚽ Marina Jallat</li>
+ 	<li>⚽ Barbara Lafarge</li>
+ 	<li>⚽ Eric Ageorges</li>
+ 	<li>⚽ Philippe Andrieux</li>
+ 	<li>⚽ Thierry Aubert</li>
+ 	<li>⚽ Thierry Autin</li>
+ 	<li>⚽ Dominique Belair</li>
+ 	<li>⚽ Patrick Bourabier</li>
+ 	<li>⚽ Sébastien Chaigne</li>
+ 	<li>⚽ Jean-Paul Chamoulaud</li>
+ 	<li>⚽ Richard Corbiat</li>
+ 	<li>⚽ Anthony Da Cunha</li>
+ 	<li>⚽ Luc Derqué</li>
+ 	<li>⚽ Abdelmounaim El Guechchati</li>
+ 	<li>⚽ Jean-Marie Fourgeau</li>
+ 	<li>⚽ Jordan Gaury</li>
+ 	<li>⚽ Philippe Lecler</li>
+ 	<li>⚽ Eric Lescarret</li>
+ 	<li>⚽ Cyril Louafi</li>
+ 	<li>⚽ Sébastien Palmier</li>
+ 	<li>⚽ Philippe Paulhac</li>
+ 	<li>⚽ Jean-Pierre Pénichon</li>
+ 	<li>⚽ Sébastien Poli</li>
+ 	<li>⚽ Patrice Pouchard</li>
+ 	<li>⚽ Jean-Louis Puaud</li>
+ 	<li>⚽ Bruno Renon</li>
+ 	<li>⚽ Jean-Paul Rullier</li>
+ 	<li>⚽ Michel Salmon</li>
+ 	<li>⚽ Bernard Terrade</li>
+ 	<li>⚽ Benoît Schellekens</li>
+ 	<li>⚽ Guillaume Ulysse</li>
+ 	<li>⚽ Jean-Luc Vernet</li>
+</ul>
+</div>
+<div class="container_arbitrage">
+<h4>Commission du Statut de l’arbitrage</h4>
+<h5>Animateur : Bruno Renon</h5>
+<h5>Membres :</h5>
+<ul>
+ 	<li>⚽ Jean-Louis Hauquin</li>
+ 	<li>⚽ Thierry Pinard</li>
+ 	<li>⚽ Bernard Portrait</li>
+ 	<li>⚽ Jean-Claude Renon</li>
+ 	<li>⚽ Yann Terrade</li>
+</ul>
+</div>
+<div class="container_arbitrage">
+<h4>Commission des Délégués</h4>
+<h5>Animateur : Philippe Faure</h5>
+<h5>Membres :</h5>
+<ul>
+ 	<li>⚽ Béatrice Gavoille</li>
+ 	<li>⚽ Bérengère Sucharyna</li>
+ 	<li>⚽ Joël Armand</li>
+ 	<li>⚽ Thierry Aubert</li>
+ 	<li>⚽ Didier Aubin</li>
+ 	<li>⚽ Jean-Marc Ferchaud</li>
+ 	<li>⚽ Eric Lescarret</li>
+ 	<li>⚽ Tony Nebout</li>
+ 	<li>⚽ Laurent Parizel</li>
+ 	<li>⚽ Jean-Claude Renon</li>
+ 	<li>⚽ Frédéric Rondeau</li>
+ 	<li>⚽ Max Roulon</li>
+</ul>
+</div>
+<a href="https://foot16.fff.fr/statuts-et-reglements/district/commissions/">Retour à la présentation des comités
+</a>
     </div>
+
     <div id="resultat"></div>
     <div id="code"></div>
-    <script src="../Asset/js/commission.js"></script>
+
+    <script src="../Asset/js/arbitrage.js"></script>
   </body>
 </html>

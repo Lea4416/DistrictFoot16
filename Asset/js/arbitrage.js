@@ -1,17 +1,17 @@
 // --- Liste des commissions ---
 let commissions = [
-  "Commission des compétitions seniors",
-  "Commission des compétitions jeunes",
-  "Commission du développement du football féminin",
-  "Commission diversification des pratiques",
-  "Commission Technique - Formation - Labellisation",
+  "Commission Logistique - Intendance - Immobilier",
+  "Commission Terrains et infrastructures sportives",
+  "Commission Santé - Hygiène - Prévention",
 ];
 
 // --- Tableaux pour stocker les nombres ---
 let nbAnimateurs = [];
 let nbMembres = [];
-document.getElementById("code").style.display = "none";
 
+function test() {
+  document.getElementById("test").innerHTML = "Test";
+}
 
 // --- Étape 1 : Lecture des nombres et création des champs de saisie ---
 function genererChamps() {
@@ -21,38 +21,20 @@ function genererChamps() {
 
   // On récupère les valeurs
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_competitions_seniors").value)
+    Number(document.getElementById("nb_animateur_arbitrage").value)
   );
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_competitions_jeunes").value)
+    Number(document.getElementById("nb_animateur_statut_arbitrage").value)
   );
   nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_football_feminin").value)
-  );
-  nbAnimateurs.push(
-    Number(
-      document.getElementById("nb_animateur_diversification_feminin").value
-    )
-  );
-  nbAnimateurs.push(
-    Number(document.getElementById("nb_animateur_tech_forma_label").value)
+    Number(document.getElementById("nb_animateur_delegue").value)
   );
 
+  nbMembres.push(Number(document.getElementById("nb_membres_arbitrage").value));
   nbMembres.push(
-    Number(document.getElementById("nb_membres_competitions_seniors").value)
+    Number(document.getElementById("nb_membres_statut_arbitrage").value)
   );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_competitions_jeunes").value)
-  );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_football_feminin").value)
-  );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_diversification_feminin").value)
-  );
-  nbMembres.push(
-    Number(document.getElementById("nb_membres_tech_forma_label").value)
-  );
+  nbMembres.push(Number(document.getElementById("nb_membres_delegue").value));
 
   // Sauvegarde dans le stockage
   sessionStorage.setItem("nbAnimateurs", JSON.stringify(nbAnimateurs));
@@ -138,17 +120,17 @@ function enregistrerNoms() {
 function afficherResultats(animateurs, membres) {
   let container = document.getElementById("information");
   document.getElementById("exemple").innerHTML = "";
+  const codeDiv = document.getElementById("code");
+
   container.innerHTML = "";
   container.innerHTML = "<h2>Résultats enregistrés :</h2>";
-  document.getElementById("code").style.display = "block";
-
 
   for (let i = 0; i < commissions.length; i++) {
     let bloc = document.createElement("div");
     bloc.classList.add("commission-resultat");
 
     let p = `
-  <div class="container_sportif">
+  <div class="container_arbitrage">
     <h4>${commissions[i]} :</h4>
     ${
       animateurs[i].length > 0
@@ -173,9 +155,9 @@ function afficherResultats(animateurs, membres) {
   padding: 20px;
   border: 1px solid black;
   width: 80%;
-  margin: 0 auto 10px auto;
+  margin: 10px auto 10px auto;
   border-radius: 40px;
-  background-color: rgba(72, 0, 100, 0.25);
+  background-color: rgba(207, 100, 1, 0.25);
 ">
   <h4 style="
     text-decoration: underline;
@@ -186,11 +168,15 @@ function afficherResultats(animateurs, membres) {
 
   ${
     animateurs[i].length > 0
-      ? animateurs[i].map((nom) => `<h5 style="
+      ? animateurs[i]
+          .map(
+            (nom) => `<h5 style="
           margin: 5px;
           font-size: 1.3rem;
           text-align: center;
-        ">Animateur : ${nom}</h5>`).join("")
+        ">Animateur : ${nom}</h5>`
+          )
+          .join("")
       : `<h5 style="
           margin: 5px;
           font-size: 1.3rem;
@@ -215,16 +201,22 @@ function afficherResultats(animateurs, membres) {
   ">
     ${
       membres[i].length > 0
-        ? membres[i].map((nom) => `<li style="margin: 5px;">⚽${nom}</li>`).join("")
+        ? membres[i]
+            .map((nom) => `<li style="margin: 5px;">⚽${nom}</li>`)
+            .join("")
         : `<li style="margin: 5px;">—</li>`
     }
   </ul>
 </div>
 `;
 
-    bloc.innerHTML = p
+    bloc.innerHTML = p;
 
-    document.getElementById("code").innerHTML += `<pre><code>${pc.replace(/</g, "&lt;").replace(/>/g, "&gt;")}`
+    console.log(document.getElementById("code"));
+
+    document.getElementById("code").innerHTML += `<pre><code>${pc
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")}</code></pre>`;
 
     container.appendChild(bloc);
   }
