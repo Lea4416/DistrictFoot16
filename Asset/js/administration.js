@@ -8,10 +8,7 @@ let commissions = [
 // --- Tableaux pour stocker les nombres ---
 let nbAnimateurs = [];
 let nbMembres = [];
-
-function test(){
-    document.getElementById("test").innerHTML = "Test"
-}
+document.getElementById("code").style.display = "none";
 
 // --- Étape 1 : Lecture des nombres et création des champs de saisie ---
 function genererChamps() {
@@ -55,17 +52,13 @@ function genererChamps() {
     // Création des champs pour animateurs
     let champsAnimateurs = "";
     for (let a = 0; a < nbAnimateurs[i]; a++) {
-      champsAnimateurs += `<input type="text" id="animateur_${i}_${a}" placeholder="Nom de l’animateur ${
-        a + 1
-      }"><br>`;
+      champsAnimateurs += `<input type="text" id="animateur_${i}_${a}" placeholder="Nom de l’animateur"><br>`;
     }
 
     // Création des champs pour membres
     let champsMembres = "";
     for (let m = 0; m < nbMembres[i]; m++) {
-      champsMembres += `<input type="text" id="membre_${i}_${m}" placeholder="Nom du membre ${
-        m + 1
-      }"><br>`;
+      champsMembres += `<input type="text" id="membre_${i}_${m}" placeholder="Nom du membre"><br>`;
     }
 
     bloc.innerHTML = `
@@ -82,7 +75,8 @@ function genererChamps() {
 
   // Bouton pour enregistrer les noms
   let bouton = document.createElement("button");
-  bouton.textContent = "Enregistrer les noms";
+  bouton.classList.add("nom");
+  bouton.innerHTML = "<span>Enregistrer les noms des membres</span>";
   bouton.onclick = enregistrerNoms;
   container.appendChild(bouton);
 }
@@ -124,10 +118,15 @@ function enregistrerNoms() {
 function afficherResultats(animateurs, membres) {
   let container = document.getElementById("information");
   document.getElementById("exemple").innerHTML = "";
-  const codeDiv = document.getElementById("code");
+    document.getElementById("code").style.display = "block";
 
   container.innerHTML = "";
   container.innerHTML = "<h2>Résultats enregistrés :</h2>";
+    container.innerHTML += "<a href='../index.html' class='accueil'> Retour a l'accueil</a>";
+  container.innerHTML +=
+     "<a href='../Commission/sportif.html' class='reset'> Reinitialisation</a>";
+  container.innerHTML +=
+    '<a class="back" href="../Commission/page1.html"><svg class="svgIcon" viewBox="0 0 384 512"><path   d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path></svg></a>';
 
   for (let i = 0; i < commissions.length; i++) {
     let bloc = document.createElement("div");

@@ -10,7 +10,7 @@ let commissions = [
 // --- Tableaux pour stocker les nombres ---
 let nbAnimateurs = [];
 let nbMembres = [];
-
+document.getElementById("code").style.display = "none";
 
 // --- Étape 1 : Lecture des nombres et création des champs de saisie ---
 function genererChamps() {
@@ -57,7 +57,8 @@ function genererChamps() {
 
   // --- Génération des champs de texte ---
   let container = document.getElementById("information");
-  container.innerHTML = ""; // On vide avant de recréer
+  container.innerHTML = "";
+    document.getElementById("code").style.display = "block";
 
   for (let i = 0; i < commissions.length; i++) {
     let bloc = document.createElement("div");
@@ -66,9 +67,7 @@ function genererChamps() {
     // Création des champs pour animateurs
     let champsAnimateurs = "";
     for (let a = 0; a < nbAnimateurs[i]; a++) {
-      champsAnimateurs += `<input type="text" id="animateur_${i}_${a}" placeholder="Nom de l’animateur ${
-        a + 1
-      }"><br>`;
+      champsAnimateurs += `<input type="text" id="animateur_${i}_${a}" placeholder="Nom de l’animateur (role)"><br>`;
     }
 
     // Création des champs pour membres
@@ -81,9 +80,9 @@ function genererChamps() {
 
     bloc.innerHTML = `
       <h3>${commissions[i]}</h3>
-      <label><strong>Animateurs (${nbAnimateurs[i]}) :</strong></label><br>
+      <label><strong>Animateurs :</strong></label><br>
       ${champsAnimateurs || "<em>Aucun animateur</em><br>"}
-      <label><strong>Membres (${nbMembres[i]}) :</strong></label><br>
+      <label><strong>Membres :</strong></label><br>
       ${champsMembres || "<em>Aucun membre</em>"}
       <hr>
     `;
@@ -93,7 +92,8 @@ function genererChamps() {
 
   // Bouton pour enregistrer les noms
   let bouton = document.createElement("button");
-  bouton.textContent = "Enregistrer les noms";
+  bouton.classList.add("nom");
+  bouton.innerHTML = "<span>Enregistrer les noms des membres</span>";
   bouton.onclick = enregistrerNoms;
   container.appendChild(bouton);
 }
@@ -139,6 +139,11 @@ function afficherResultats(animateurs, membres) {
 
   container.innerHTML = "";
   container.innerHTML = "<h2>Résultats enregistrés :</h2>";
+        container.innerHTML += "<a href='../index.html' class='accueil'> Retour a l'accueil</a>";
+  container.innerHTML +=
+     "<a href='../Commission/sportif.html' class='reset'> Reinitialisation</a>";
+  container.innerHTML +=
+    '<a class="back" href="../Commission/page1.html"><svg class="svgIcon" viewBox="0 0 384 512"><path   d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path></svg></a>';
 
   for (let i = 0; i < commissions.length; i++) {
     let bloc = document.createElement("div");

@@ -7,18 +7,18 @@ function traitement() {
   const mail = document.getElementById("mail").value;
   const divcode = document.getElementById("code");
   const code = `<div style="display:flex;flex-direction:column;justify-content:space-between;padding:20px;border-radius:20px;background-color:rgba(30,115,190,0.06);box-shadow:0 2px 5px rgb(0,0,0);">
-    <img src="https://foot16.fff.fr/wp-content/uploads/sites/27/2025/10/1759734907210_image4.jpeg" style="width:200px;display:block;margin:0 auto 20px auto;box-shadow:0 2px 5px rgb(0,0,0);background-color:white;" />
+    <img src="${photo}" style="width:200px;display:block;margin:0 auto 20px auto;box-shadow:0 2px 5px rgb(0,0,0);background-color:white;" />
     <div style="padding:10px;border-radius:30px;background-color:rgba(0,49,114,0.1);box-shadow:0 2px 5px rgb(0,0,0);">
-        <p style="text-align:center; font-weight:bolder;">Martinaud Léa</p>
-        <p style="text-align:center; font-weight:bolder;">Membre de la comission</p>
-        <p style="text-align:center;">comunication</p>
+        <p style="text-align:center; font-weight:bolder;">${nom}</p>
+        <p style="text-align:center; font-weight:bolder;">${titre}</p>
+        <p style="text-align:center;">${mission}</p>
         <div style="display:flex;flex-direction:row;align-items:center;gap:10px;justify-content:center;">
             <img src="https://foot16.fff.fr/wp-content/uploads/sites/27/2025/09/phone.png" style="width:20px;" />
-            <p>0252541</p>
+            <p>${tel}</p>
         </div>
         <div style="display:flex;flex-direction:row;align-items:center;gap:10px;justify-content:center;">
             <img src="https://foot16.fff.fr/wp-content/uploads/sites/27/2025/09/mail.png" style="width:20px;" />
-            <p>lm@gmail.com</p>
+            <p>${mail}</p>
         </div>
     </div>
 `;

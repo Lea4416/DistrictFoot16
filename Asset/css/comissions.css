@@ -1,3 +1,36 @@
+@keyframes moveBall {
+  0% {
+    left: -40px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 40px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.back:active {
+  transform: scale(0.97);
+}
+
 .container_sportif {
   display: flex;
   flex-direction: column;
@@ -93,11 +126,12 @@ a {
   padding: 20px;
   border-radius: 20px;
   background-color: rgb(0, 0, 255);
-  width: 40%;
+  width: fit-content;
   color: white;
   border: 1px solid black;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .bold {
@@ -114,7 +148,7 @@ a {
   text-align: center;
 }
 
-#code{
+#code {
   background-color: white;
   width: fit-content;
   border-radius: 50px;
@@ -122,3 +156,238 @@ a {
   margin: 10px auto;
   padding: 20px;
 }
+
+.btn_sportif {
+  background-color: rgb(0, 51, 153);
+  color: (rgb(255, 255, 255));
+  overflow: hidden; /* masque le ballon quand il sort du bouton */
+  transition: background-color 0.6s ease, color 0.6s ease;
+  position: relative;
+}
+
+.btn_sportif:hover {
+  background-color: rgb(204, 0, 0);
+}
+
+/* --- Ballon --- */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Lance l’animation seulement au survol */
+.btn_sportif:hover .icon {
+  animation: moveBall 2s linear;
+}
+
+.btn_admin {
+  background-color: rgb(25, 42, 86);
+  color: rgb(255, 255, 255);
+  overflow: hidden; /* masque le ballon quand il sort du bouton */
+  transition: background-color 0.6s ease, color 0.6s ease;
+  position: relative;
+}
+
+.btn_admin:hover {
+  background-color: rgb(230, 230, 230);
+  color: black;
+}
+
+/* Lance l’animation seulement au survol */
+.btn_admin:hover .icon {
+  animation: moveBall 2s linear;
+}
+.btn_arbitrage {
+  background-color: rgb(238, 255, 0);
+  color: rgb(0, 0, 0);
+  overflow: hidden; /* masque le ballon quand il sort du bouton */
+  transition: background-color 0.6s ease, color 0.6s ease;
+  position: relative;
+}
+
+.btn_arbitrage:hover {
+  background-color: rgb(248, 232, 184);
+  color: rgb(0, 0, 0);
+}
+
+/* Lance l’animation seulement au survol */
+.btn_arbitrage:hover .icon {
+  animation: moveBall 2s linear;
+}
+.btn_citoyennete {
+  background-color: rgb(100, 149, 237);
+  color: rgb(255, 255, 255);
+  overflow: hidden; /* masque le ballon quand il sort du bouton */
+  transition: background-color 0.6s ease, color 0.6s ease;
+  position: relative;
+}
+
+.btn_citoyennete:hover {
+  background-color: rgb(245, 245, 240);
+  color: rgb(0, 0, 0);
+}
+
+/* Lance l’animation seulement au survol */
+.btn_citoyennete:hover .icon {
+  animation: moveBall 2s linear;
+}
+.btn_juridiction {
+  background-color: rgb(128, 0, 32);
+  color: rgb(255, 255, 255);
+  overflow: hidden; /* masque le ballon quand il sort du bouton */
+  transition: background-color 0.6s ease, color 0.6s ease;
+  position: relative;
+}
+
+.btn_juridiction:hover {
+  background-color: rgb(200, 200, 200);
+  color: rgb(0, 0, 0);
+}
+
+/* Lance l’animation seulement au survol */
+.btn_juridiction:hover .icon {
+  animation: moveBall 2s linear;
+}
+
+.page1{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.membres {
+  width: 150px;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #5cdb95;
+}
+
+.membres span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.membres:hover {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+
+.nom{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+
+.nom:hover{
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+
+.reset {
+  background-color: rgb(255, 0, 200);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: transform 0.6s ease, background-color 0.3s ease;
+  transform-style: preserve-3d;  /* nécessaire pour l’effet 3D */
+}
+
+.reset:hover {
+  transform: rotateZ(360deg);
+  background-color: rgb(255, 69, 0);
+  color: white;
+}
+
+.comission {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(220, 20, 60), rgb(255, 69, 0));
+  background-size: 200% 100%; /* permet de faire défiler le gradient */
+  transition: background-position 0.5s ease;
+}
+
+/* Hover : le gradient se déplace de gauche à droite */
+.comission:hover {
+  background-position: 100% 0;
+}
+
+.back {
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.back:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(55, 0, 255);
+  align-items: center;
+}
+
+.back:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.back::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Retour aux choix comissions";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.back:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+
